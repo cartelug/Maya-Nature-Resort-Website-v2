@@ -1,0 +1,292 @@
+/* ============================================================
+   COMPONENTS — Reusable design primitives
+   ============================================================ */
+
+/* — Typography components — */
+.display {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--c-green-800);
+  text-wrap: balance;
+}
+
+.display--xl  { font-size: var(--fs-96); }
+.display--lg  { font-size: var(--fs-72); }
+.display--md  { font-size: var(--fs-52); }
+.display--sm  { font-size: var(--fs-40); }
+.display--xs  { font-size: var(--fs-32); }
+
+.display em {
+  font-style: italic;
+  color: var(--c-gold-600);
+}
+
+.display--light {
+  color: #fff;
+}
+
+.display--light em {
+  color: var(--c-gold-100);
+}
+
+.lead {
+  font-size: var(--fs-18);
+  line-height: var(--lh-relaxed);
+  color: var(--c-text-soft);
+  max-width: 60ch;
+  text-wrap: pretty;
+}
+
+.lead--light {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.muted {
+  color: var(--c-text-soft);
+}
+
+.script {
+  font-family: var(--ff-display);
+  font-style: italic;
+  color: var(--c-gold-500);
+}
+
+/* — Eyebrow — */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-family: var(--ff-body);
+  font-weight: 600;
+  font-size: var(--fs-12);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--c-gold-600);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 32px;
+  height: 1.5px;
+  background: var(--c-gold-400);
+  flex-shrink: 0;
+}
+
+.eyebrow--light {
+  color: var(--c-gold-100);
+}
+
+.eyebrow--light::before {
+  background: rgba(246, 231, 176, 0.7);
+}
+
+.eyebrow--center {
+  margin-inline: auto;
+}
+
+/* — Rule (gold divider) — */
+.rule {
+  width: 56px;
+  height: 2px;
+  background: var(--c-gold-400);
+  border: none;
+}
+
+/* — Buttons — */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  font-family: var(--ff-body);
+  font-weight: 600;
+  font-size: var(--fs-14);
+  letter-spacing: var(--tracking-wide);
+  padding: 0.95rem 1.875rem;
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: transform var(--dur-base) var(--ease-spring),
+              box-shadow var(--dur-base) var(--ease-out-quart),
+              background-color var(--dur-base) var(--ease-out-quart),
+              border-color var(--dur-base) var(--ease-out-quart),
+              color var(--dur-base) var(--ease-out-quart);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--primary {
+  background: var(--c-gold-400);
+  color: var(--c-green-900);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn--primary:hover {
+  background: var(--c-gold-100);
+  box-shadow: var(--shadow-gold-lg);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+}
+
+.btn--green {
+  background: var(--c-green-500);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(63, 136, 74, 0.35);
+}
+
+.btn--green:hover {
+  background: var(--c-green-600);
+  box-shadow: 0 14px 32px rgba(63, 136, 74, 0.45);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--c-green-700);
+  border-color: var(--c-green-500);
+}
+
+.btn--outline:hover {
+  background: var(--c-green-500);
+  color: #fff;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn--sm {
+  padding: 0.7rem 1.25rem;
+  font-size: var(--fs-12);
+}
+
+/* — Pill / badge — */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--r-pill);
+  background: rgba(234, 192, 89, 0.12);
+  border: 1px solid rgba(234, 192, 89, 0.4);
+  color: var(--c-gold-700);
+  font-size: var(--fs-12);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+}
+
+.pill--light {
+  background: rgba(246, 231, 176, 0.18);
+  border-color: rgba(246, 231, 176, 0.45);
+  color: var(--c-gold-100);
+}
+
+/* — Form fields — */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.field__label {
+  font-family: var(--ff-body);
+  font-weight: 600;
+  font-size: var(--fs-12);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--c-gold-100);
+}
+
+.field__input,
+.field__select {
+  appearance: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--r-sm);
+  padding: 0.85rem 1rem;
+  color: #fff;
+  font-family: var(--ff-body);
+  font-size: var(--fs-14);
+  font-weight: 400;
+  outline: none;
+  transition: border-color var(--dur-base) var(--ease-out-quart),
+              background-color var(--dur-base) var(--ease-out-quart);
+}
+
+.field__input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.field__input:focus,
+.field__select:focus {
+  border-color: var(--c-gold-400);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.field__select {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F6E7B0'><path d='M4 6l4 4 4-4'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 14px;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.field__select option {
+  background: var(--c-green-800);
+  color: #fff;
+}
+
+/* — Reveal animation — */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity var(--dur-slower) var(--ease-out-expo),
+              transform var(--dur-slower) var(--ease-out-expo);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal--d1 { transition-delay: 80ms; }
+.reveal--d2 { transition-delay: 160ms; }
+.reveal--d3 { transition-delay: 240ms; }
+.reveal--d4 { transition-delay: 320ms; }
+.reveal--d5 { transition-delay: 400ms; }
+
+/* — Card — base — */
+.card {
+  background: var(--c-paper);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  transition: transform var(--dur-slow) var(--ease-out-expo),
+              box-shadow var(--dur-slow) var(--ease-out-expo),
+              border-color var(--dur-slow) var(--ease-out-expo);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-3);
+  border-color: var(--c-line-soft);
+}

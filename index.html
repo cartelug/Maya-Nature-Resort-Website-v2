@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1F5228">
+  <meta name="description" content="Maya Nature Resort — a luxury eco-resort on Sun Hill, just 22km from Kampala. Forest, fountains, weddings and unforgettable stays. Where the sun rises and sets.">
+
+  <!-- Social / Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Maya Nature Resort — Where the Sun Rises and Sets">
+  <meta property="og:description" content="A luxury nature escape on Sun Hill, 22km from Kampala. Forest, fountains, weddings and unforgettable stays.">
+  <meta property="og:image" content="assets/img/hero-sunhill.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>Maya Nature Resort — Where the Sun Rises and Sets</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+
+  <!-- Preload critical fonts to avoid FOUT -->
+  <link rel="preload" href="assets/fonts/Fraunces-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/hero-sunhill.jpg" as="image">
+
+  <!-- Stylesheets — modular, layered (no specificity wars) -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/scenes.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav id="nav" class="nav" aria-label="Primary">
+  <div class="container nav__inner">
+    <a href="#home" class="nav__logo" aria-label="Maya Nature Resort — home">
+      <img src="assets/img/logo.jpg" alt="Maya Nature Resort">
+    </a>
+    <div class="nav__links">
+      <a href="#rooms" class="nav__link">Rooms</a>
+      <a href="#experiences" class="nav__link">Experiences</a>
+      <a href="#events" class="nav__link">Events</a>
+      <a href="#gallery" class="nav__link">Gallery</a>
+      <a href="#contact" class="nav__link">Contact</a>
+      <a href="#book" class="nav__cta">Book Now</a>
+    </div>
+    <button id="burger" class="nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobileMenu" class="menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+  <button id="menuClose" class="menu__close" aria-label="Close menu">&times;</button>
+  <a href="#rooms" class="menu__link">Rooms</a>
+  <a href="#experiences" class="menu__link">Experiences</a>
+  <a href="#events" class="menu__link">Events</a>
+  <a href="#gallery" class="menu__link">Gallery</a>
+  <a href="#contact" class="menu__link">Contact</a>
+  <a href="#book" class="menu__link menu__cta">Book Your Stay</a>
+  <div class="menu__tag">Where the sun rises and sets</div>
+</div>
+
+<main id="main">
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<header class="hero" id="home">
+  <div class="hero__photo" role="img" aria-label="Sun Hill at Maya Nature Resort with Kampala stretching to the horizon"></div>
+  <div class="hero__veil"></div>
+  <div id="heroSun" class="hero__sun" aria-hidden="true">
+    <div class="hero__sun-core"></div>
+  </div>
+  <div class="hero__mist" aria-hidden="true"></div>
+
+  <div class="hero__content">
+    <div class="container">
+      <div class="hero__inner">
+        <span class="eyebrow eyebrow--light">Maya Nature Resort &middot; Wakiso, Uganda</span>
+        <h1 class="hero__title">Where the sun<br><em>rises</em> and sets</h1>
+        <p class="hero__sub">A luxury nature escape just 22 kilometres from Kampala — ancient forest, Africa's most colourful dancing fountain, and unforgettable stays beneath the Sun Hill sky.</p>
+        <div class="hero__ctas">
+          <a href="#book" class="btn btn--primary">Book Your Stay</a>
+          <a href="#rooms" class="btn btn--ghost">Explore the Resort</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__stats" aria-label="At a glance">
+    <div class="container">
+      <div class="hero__stats-grid">
+        <div class="hero__stat"><div class="hero__stat-num">22 km</div><div class="hero__stat-label">From Kampala</div></div>
+        <div class="hero__stat"><div class="hero__stat-num">4.7&#9733;</div><div class="hero__stat-label">Guest Rating</div></div>
+        <div class="hero__stat"><div class="hero__stat-num">6</div><div class="hero__stat-label">Room Styles</div></div>
+        <div class="hero__stat"><div class="hero__stat-num">3,000</div><div class="hero__stat-label">Event Capacity</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <span class="hero__scroll-line"></span>
+  </div>
+</header>
+
+<!-- ============================================================
+     WELCOME
+     ============================================================ -->
+<section class="welcome section">
+  <div class="container welcome__grid">
+    <div class="welcome__body reveal">
+      <span class="eyebrow">Welcome to Maya</span>
+      <h2 class="display display--md" style="margin-top:.875rem">A sanctuary where<br>nature meets <em>luxury</em>.</h2>
+      <p>Perched atop Sun Hill in Maya, Wakiso, our eco-resort is a world away from the city — yet only thirty minutes from it. Wander through preserved forest alive with birdsong and resident vervet monkeys, watch the famous fountain dance at dusk, and fall asleep to the quiet of the hills. Opened in 2018 as a forty-year dream, Maya is Uganda's hidden paradise, finally ready to be discovered.</p>
+      <div class="welcome__sign">&ldquo;Where the sun rises and sets.&rdquo;</div>
+    </div>
+    <div class="values reveal reveal--d2">
+      <div class="value">
+        <div class="value__icon"><svg viewBox="0 0 24 24"><path d="M12 3C8 3 5 7 5 12s3 9 7 9 7-4 7-9-3-9-7-9z"/><path d="M12 3c0 6-3 9-7 9M12 3c0 6 3 9 7 9"/></svg></div>
+        <h3>Untouched Nature</h3>
+        <p>12 hectares of preserved forest, wildlife, and hilltop views.</p>
+      </div>
+      <div class="value">
+        <div class="value__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <h3>The Sun Hill</h3>
+        <p>Golden sunrises and sunsets you won't find anywhere else.</p>
+      </div>
+      <div class="value">
+        <div class="value__icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg></div>
+        <h3>World-Class Events</h3>
+        <p>A 3,000-seat hall and gardens for up to 10 weddings at once.</p>
+      </div>
+      <div class="value">
+        <div class="value__icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Minutes Away</h3>
+        <p>Just 22 km from Kampala on the Masaka highway.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOUNTAIN (signature feature)
+     ============================================================ -->
+<section class="fountain section">
+  <div class="container fountain__grid">
+    <div class="fountain__body reveal">
+      <span class="eyebrow eyebrow--light">The Signature Attraction</span>
+      <h2 class="display display--md display--light" style="margin-top:.875rem">Africa's only<br><em>dancing fountain</em>.</h2>
+      <p>As the sun sets over Sun Hill, our legendary fountain comes alive — over 1.2 million colour variations rising and falling in a hypnotic display. Guests have mistaken it for Dubai. We simply call it home. It is the most photographed spot at Maya, and the reason so many evenings here end in wonder.</p>
+      <span class="pill pill--light" style="margin-top:1.5rem">&#10024; A "mini-Dubai", 30 minutes from the city</span>
+    </div>
+    <div id="fountainStage" class="fountain__stage reveal reveal--d2" aria-label="Animated representation of the dancing fountain">
+      <div class="fountain__stage-glow"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ROOMS
+     ============================================================ -->
+<section class="rooms section" id="rooms">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow eyebrow--center">Stay With Us</span>
+      <h2 class="display display--md">Rooms &amp; <em>Cottages</em></h2>
+      <p class="lead">From elegant deluxe rooms to private Msizi cottages wrapped in forest — every stay includes garden views, free WiFi, and the Maya welcome.</p>
+    </div>
+
+    <div class="rooms__grid">
+      <article class="room reveal reveal--d1">
+        <div class="room__media"><div class="room__scene scene-sunrise"></div><div class="room__price">$70<small>/night</small></div></div>
+        <div class="room__body">
+          <div class="room__tag">Deluxe Block</div>
+          <h3>Standard Single</h3>
+          <p class="room__desc">A serene retreat with a queen bed, sitting area, and rain shower.</p>
+          <div class="room__features"><span>1 Guest</span><span>Queen Bed</span><span>Garden View</span></div>
+          <button class="room__book" data-room="Standard Single ($70/night)">Book This Room</button>
+        </div>
+      </article>
+
+      <article class="room reveal reveal--d2">
+        <div class="room__media"><div class="room__scene scene-garden"></div><div class="room__price">$90<small>/night</small></div></div>
+        <div class="room__body">
+          <div class="room__tag">Deluxe Block</div>
+          <h3>Standard Double</h3>
+          <p class="room__desc">Spacious and bright, perfect for couples and short escapes.</p>
+          <div class="room__features"><span>2 Guests</span><span>Double Bed</span><span>Balcony</span></div>
+          <button class="room__book" data-room="Standard Double ($90/night)">Book This Room</button>
+        </div>
+      </article>
+
+      <article class="room reveal reveal--d3">
+        <div class="room__media"><div class="room__scene scene-meadow"></div><div class="room__price">$100<small>/night</small></div></div>
+        <div class="room__body">
+          <div class="room__tag">Deluxe Block</div>
+          <h3>Twin Room</h3>
+          <p class="room__desc">Two comfortable beds for friends, family, or business travel.</p>
+          <div class="room__features"><span>2 Guests</span><span>Twin Beds</span><span>Work Desk</span></div>
+          <button class="room__book" data-room="Twin Room ($100/night)">Book This Room</button>
+        </div>
+      </article>
+
+      <article class="room reveal reveal--d1">
+        <div class="room__media"><div class="room__scene scene-forest"></div><div class="room__price">$130<small>/night</small></div></div>
+        <div class="room__body">
+          <div class="room__tag">Msizi Cottage</div>
+          <h3>Msizi Cottage</h3>
+          <p class="room__desc">A private cottage among the Msizi trees — sunrise and sunset views.</p>
+          <div class="room__features"><span>2 Guests</span><span>Private</span><span>Forest View</span></div>
+          <button class="room__book" data-room="Msizi Cottage ($130/night)">Book This Cottage</button>
+        </div>
+      </article>
+
+      <article class="room reveal reveal--d2">
+        <div class="room__media"><div class="room__scene scene-honey"></div><div class="room__price">$150<small>/night</small></div></div>
+        <div class="room__body">
+          <div class="room__tag">Msizi Cottage</div>
+          <h3>Honeymoon Cottage</h3>
+          <p class="room__desc">A romantic suite designed for two, with a private setting and special touches.</p>
+          <div class="room__features"><span>2 Guests</span><span>Romantic</span><span>Private Deck</span></div>
+          <button class="room__book" data-room="Honeymoon Cottage ($150/night)">Book This Cottage</button>
+        </div>
+      </article>
+
+      <article class="room reveal reveal--d3">
+        <div class="room__media"><div class="room__scene scene-hill"></div><div class="room__price">$250<small>/night</small></div></div>
+        <div class="room__body">
+          <div class="room__tag">Msizi Cottage</div>
+          <h3>Family Cottage</h3>
+          <p class="room__desc">Room for the whole family, with space to relax and the forest at your door.</p>
+          <div class="room__features"><span>4+ Guests</span><span>Family</span><span>Spacious</span></div>
+          <button class="room__book" data-room="Family Cottage ($250/night)">Book This Cottage</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXPERIENCES
+     ============================================================ -->
+<section class="exp section" id="experiences">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow eyebrow--center">Things To Do</span>
+      <h2 class="display display--md">Unforgettable <em>Experiences</em></h2>
+      <p class="lead">Adventure, serenity, and discovery — all within the grounds of the resort.</p>
+    </div>
+
+    <div class="exp__grid">
+      <div class="exp__card reveal reveal--d1">
+        <div class="exp__icon"><svg viewBox="0 0 24 24"><path d="M3 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 7c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg></div>
+        <h3>Dancing Fountain</h3>
+        <p>Africa's most colourful fountain, lit up every evening.</p>
+      </div>
+      <div class="exp__card reveal reveal--d2">
+        <div class="exp__icon"><svg viewBox="0 0 24 24"><path d="M3 6l18 0M5 6l3 14M19 6l-3 14M9 14h6"/></svg></div>
+        <h3>Zip-Lining</h3>
+        <p>Soar above the forest canopy for the ultimate thrill.</p>
+      </div>
+      <div class="exp__card reveal reveal--d3">
+        <div class="exp__icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M5 9c0-4 3-7 7-7s7 3 7 7c-2 2-4 3-7 3s-5-1-7-3z"/></svg></div>
+        <h3>Nature Walks</h3>
+        <p>Guided trails through preserved forest and wild gardens.</p>
+      </div>
+
+      <!-- Wildlife: photo card with the real vervet monkey photo -->
+      <div class="exp__card exp__card--photo reveal reveal--d4">
+        <div class="exp__img scene-photo-monkey" role="img" aria-label="Resident vervet monkeys at Maya Nature Resort"></div>
+        <div class="exp__body">
+          <h3>Wildlife &amp; Birding</h3>
+          <p>Resident vervet monkeys, dozens of bird species, and forest at every turn.</p>
+        </div>
+      </div>
+
+      <div class="exp__card reveal reveal--d1">
+        <div class="exp__icon"><svg viewBox="0 0 24 24"><path d="M3 12c0-3 4-5 9-5s9 2 9 5-4 5-9 5-9-2-9-5z"/><path d="M7 12c0-1 2-2 5-2s5 1 5 2"/></svg></div>
+        <h3>Swimming</h3>
+        <p>Cool off in the pool with views over the hills.</p>
+      </div>
+      <div class="exp__card reveal reveal--d2">
+        <div class="exp__icon"><svg viewBox="0 0 24 24"><path d="M3 20l6-10 4 6 4-8 4 12z"/></svg></div>
+        <h3>Hill Climbing</h3>
+        <p>Hike Sun Hill for panoramic sunrise and sunset views.</p>
+      </div>
+      <div class="exp__card reveal reveal--d3">
+        <div class="exp__icon"><svg viewBox="0 0 24 24"><path d="M4 18h16M6 18v-4M18 18v-4M9 14h6M9 14V8a3 3 0 016 0v6"/></svg></div>
+        <h3>BBQ &amp; Dining</h3>
+        <p>Nyama choma and fine dining at Ropes Bar &amp; Restaurant.</p>
+      </div>
+      <div class="exp__card reveal reveal--d4">
+        <div class="exp__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div>
+        <h3>Playland Park</h3>
+        <p>21 activities for kids — a secure, joyful playground.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EVENTS
+     ============================================================ -->
+<section class="events section" id="events">
+  <div class="container">
+    <div class="section-head section-head--split reveal">
+      <div>
+        <span class="eyebrow">Celebrate With Us</span>
+        <h2 class="display display--md" style="margin-top:.875rem">Events &amp; <em>Celebrations</em></h2>
+      </div>
+      <a href="#book" class="btn btn--outline">Plan Your Event</a>
+    </div>
+
+    <div class="events__grid">
+      <article class="event event--big reveal reveal--d1">
+        <div class="event__scene scene-photo-heart" role="img" aria-label="Heart of roses installation overlooking the hills at Maya Nature Resort"></div>
+        <div class="event__overlay"></div>
+        <div class="event__body">
+          <div class="event__tag">Bulangiti Hall &middot; Oasis Gardens</div>
+          <h3>Weddings &amp; Grand Events</h3>
+          <p>Host up to 10 weddings at once across the Oasis Gardens, or seat 3,000 guests in our signature hall. The most versatile venue in the region.</p>
+        </div>
+      </article>
+      <article class="event reveal reveal--d2">
+        <div class="event__scene scene-sunrise"></div><div class="event__overlay"></div>
+        <div class="event__body"><div class="event__tag">Celebrations</div><h3>Baby &amp; Bridal Showers</h3></div>
+      </article>
+      <article class="event reveal reveal--d3">
+        <div class="event__scene scene-meadow"></div><div class="event__overlay"></div>
+        <div class="event__body"><div class="event__tag">Milestones</div><h3>Graduations</h3></div>
+      </article>
+      <article class="event reveal reveal--d2">
+        <div class="event__scene scene-forest"></div><div class="event__overlay"></div>
+        <div class="event__body"><div class="event__tag">Corporate</div><h3>Retreats &amp; Conferences</h3></div>
+      </article>
+      <article class="event reveal reveal--d3">
+        <div class="event__scene scene-dusk"></div><div class="event__overlay"></div>
+        <div class="event__body"><div class="event__tag">Private</div><h3>Birthdays &amp; Parties</h3></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STATS
+     ============================================================ -->
+<section class="stats section">
+  <div class="container">
+    <div class="stats__grid">
+      <div class="stat reveal reveal--d1"><div class="stat__num" data-count="2018">2018</div><div class="stat__label">The year our<br>40-year dream opened</div></div>
+      <div class="stat reveal reveal--d2"><div class="stat__num" data-count="22">22</div><div class="stat__label">Kilometres from<br>Kampala city centre</div></div>
+      <div class="stat reveal reveal--d3"><div class="stat__num" data-count="3000">3,000</div><div class="stat__label">Guest capacity in<br>Bulangiti Hall</div></div>
+      <div class="stat reveal reveal--d4"><div class="stat__num">4.7&#9733;</div><div class="stat__label">Average guest<br>rating online</div></div>
+    </div>
+    <div class="stats__note reveal reveal--d2">
+      <p class="stats__quote">&ldquo;One of the major tourism foundations with an uninterrupted ecosystem in the central region.&rdquo;</p>
+      <div class="stats__source">&mdash; Minister of Tourism, Wildlife &amp; Antiquities, 2024</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALLERY
+     ============================================================ -->
+<section class="gallery section" id="gallery">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow eyebrow--center">A Glimpse of Maya</span>
+      <h2 class="display display--md">The <em>Gallery</em></h2>
+    </div>
+    <div class="gallery__grid">
+      <div class="g-item g-item--tall reveal reveal--d1"><div class="g-item__scene scene-photo-heart"></div><div class="g-item__overlay"></div></div>
+      <div class="g-item g-item--wide reveal reveal--d2"><div class="g-item__scene scene-photo-hilltop"></div><div class="g-item__overlay"></div></div>
+      <div class="g-item reveal reveal--d3"><div class="g-item__scene scene-water"></div><div class="g-item__overlay"></div></div>
+      <div class="g-item reveal reveal--d1"><div class="g-item__scene scene-garden"></div><div class="g-item__overlay"></div></div>
+      <div class="g-item reveal reveal--d2"><div class="g-item__scene scene-photo-monkey"></div><div class="g-item__overlay"></div></div>
+      <div class="g-item g-item--tall reveal reveal--d3"><div class="g-item__scene scene-dusk"></div><div class="g-item__overlay"></div></div>
+      <div class="g-item g-item--wide reveal reveal--d1"><div class="g-item__scene scene-hill"></div><div class="g-item__overlay"></div></div>
+      <div class="g-item reveal reveal--d2"><div class="g-item__scene scene-honey"></div><div class="g-item__overlay"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section class="testi section">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow eyebrow--center">Loved By Guests</span>
+      <h2 class="display display--md">What Our <em>Guests Say</em></h2>
+    </div>
+    <div class="testi__grid">
+      <figure class="testi__card reveal reveal--d1">
+        <div class="testi__quote-mark">&ldquo;</div>
+        <div class="testi__stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote><p>The cottages were large, spotless, and the bathrooms beautiful. The staff were gracious and did everything to our satisfaction. We stayed for a wedding and it was perfect.</p></blockquote>
+        <figcaption class="testi__by">Verified Guest<span>Stayed for a wedding &middot; Trip.com</span></figcaption>
+      </figure>
+      <figure class="testi__card reveal reveal--d2">
+        <div class="testi__quote-mark">&ldquo;</div>
+        <div class="testi__stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote><p>The dancing fountain at night is something else entirely. I posted a photo and everyone thought I'd flown to Dubai. All of this barely 30 minutes from town.</p></blockquote>
+        <figcaption class="testi__by">Weekend Visitor<span>Kampala</span></figcaption>
+      </figure>
+      <figure class="testi__card reveal reveal--d3">
+        <div class="testi__quote-mark">&ldquo;</div>
+        <div class="testi__stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote><p>We brought the whole family for the festive season. The kids loved Playland, the fireworks were magical, and we've already booked again for next year.</p></blockquote>
+        <figcaption class="testi__by">Returning Family<span>Festive Season Stay</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOKING
+     ============================================================ -->
+<section class="book section" id="book">
+  <div class="container book__grid">
+    <div class="reveal">
+      <span class="eyebrow eyebrow--light">Reserve Your Escape</span>
+      <h2 class="display display--md display--light" style="margin-top:.875rem">Your stay at Maya<br><em>awaits</em>.</h2>
+      <p class="lead lead--light" style="margin-top:1.25rem">Tell us when you'd like to visit and our team will confirm availability within hours. Or reach us directly — we're always happy to help plan your perfect getaway.</p>
+
+      <div class="book__contacts">
+        <a class="contact" href="https://wa.me/256704602520" target="_blank" rel="noopener">
+          <div class="contact__icon"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2 1a11 11 0 005 5l1-2 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></div>
+          <div><div class="contact__label">WhatsApp / Call</div><div class="contact__value">+256 704 602 520</div></div>
+        </a>
+        <a class="contact" href="tel:+256414230292">
+          <div class="contact__icon"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2 1a11 11 0 005 5l1-2 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></div>
+          <div><div class="contact__label">Reception</div><div class="contact__value">+256 414 230 292</div></div>
+        </a>
+        <a class="contact" href="mailto:info@mayanatureresort.com">
+          <div class="contact__icon"><svg viewBox="0 0 24 24"><path d="M3 7l9 6 9-6M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M3 7a2 2 0 012-2h14a2 2 0 012 2"/></svg></div>
+          <div><div class="contact__label">Email Us</div><div class="contact__value">info@mayanatureresort.com</div></div>
+        </a>
+        <div class="contact">
+          <div class="contact__icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="contact__label">Find Us</div><div class="contact__value">Sun Hill, Maya &middot; Kyengera, Wakiso</div></div>
+        </div>
+      </div>
+    </div>
+
+    <form class="form-card reveal reveal--d2" onsubmit="return false" aria-label="Booking enquiry form">
+      <h3>Check Availability</h3>
+      <div class="form-card__sub">Free to enquire &middot; instant WhatsApp confirmation</div>
+
+      <div class="form-row">
+        <div class="field">
+          <label class="field__label" for="bName">Full Name</label>
+          <input id="bName" class="field__input" type="text" placeholder="Your name" autocomplete="name">
+        </div>
+        <div class="field">
+          <label class="field__label" for="bPhone">Phone</label>
+          <input id="bPhone" class="field__input" type="tel" placeholder="+256 ..." autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label class="field__label" for="bIn">Check In</label>
+          <input id="bIn" class="field__input" type="date">
+        </div>
+        <div class="field">
+          <label class="field__label" for="bOut">Check Out</label>
+          <input id="bOut" class="field__input" type="date">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label class="field__label" for="bRoom">Room / Cottage</label>
+          <select id="bRoom" class="field__select">
+            <option>Standard Single &mdash; $70</option>
+            <option>Standard Double &mdash; $90</option>
+            <option>Twin Room &mdash; $100</option>
+            <option>Msizi Cottage &mdash; $130</option>
+            <option>Honeymoon Cottage &mdash; $150</option>
+            <option>Family Cottage &mdash; $250</option>
+            <option>Event / Wedding Enquiry</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field__label" for="bGuests">Guests</label>
+          <select id="bGuests" class="field__select">
+            <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option>
+            <option>4 Guests</option><option>5+ Guests</option><option>Group / Event</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="bSubmit" type="submit" class="btn btn--primary btn--block">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.5A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.9.9-2.8-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.7-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 01-1.9-1.2 7.2 7.2 0 01-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 00-.7.3 2.8 2.8 0 00-.9 2.1 4.9 4.9 0 001 2.6 11.2 11.2 0 004.3 3.8c.6.3 1.1.4 1.5.5a3.6 3.6 0 001.6.1 2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.2-1.2c-.1-.2-.3-.2-.5-.3z"/></svg>
+        Send Enquiry via WhatsApp
+      </button>
+      <p class="form-card__note">By sending, a pre-filled WhatsApp message opens to our reservations team. No payment required to enquire.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo"><img src="assets/img/logo.jpg" alt="Maya Nature Resort"></div>
+        <p class="footer__about">A luxury eco nature resort atop Sun Hill in Maya, Wakiso — forest, fountains, and unforgettable stays, just 22km from Kampala.</p>
+        <div class="footer__tag">Where the sun rises and sets</div>
+      </div>
+      <div class="footer__col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#rooms">Rooms &amp; Cottages</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#events">Events &amp; Weddings</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="#book">Book a Stay</a></li>
+          <li><a href="#book">Plan an Event</a></li>
+          <li><a href="#book">Check Availability</a></li>
+          <li><a href="https://wa.me/256704602520" target="_blank" rel="noopener">WhatsApp Us</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__contact">
+        <h4>Contact</h4>
+        <div><div class="fk">Location</div><div class="fv">Sun Hill, Maya &middot; Off Kampala&ndash;Masaka Hwy<br>Kyengera, Wakiso District</div></div>
+        <div><div class="fk">Reception</div><div class="fv">+256 414 230 292 &middot; +256 704 602 520</div></div>
+        <div><div class="fk">Email</div><div class="fv">info@mayanatureresort.com</div></div>
+        <div><div class="fk">Check-in / out</div><div class="fv">2:00 PM &middot; 12:00 PM</div></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 Maya Nature Resort. All rights reserved.</span>
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h2.5l.5-3h-3v-2a1 1 0 011-1z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg></a>
+        <a href="https://wa.me/256704602520" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.5A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.9.9-2.8-.2-.3A8 8 0 1112 20z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     FLOATING UI
+     ============================================================ -->
+<a class="wa-float" href="https://wa.me/256704602520" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.5A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.9.9-2.8-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.7-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 01-1.9-1.2 7.2 7.2 0 01-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 00-.7.3 2.8 2.8 0 00-.9 2.1 4.9 4.9 0 001 2.6 11.2 11.2 0 004.3 3.8c.6.3 1.1.4 1.5.5a3.6 3.6 0 001.6.1 2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.2-1.2c-.1-.2-.3-.2-.5-.3z"/></svg>
+</a>
+
+<button id="toTop" class="to-top" aria-label="Back to top">&#8593;</button>
+
+<div class="book-bar">
+  <div class="book-bar__price">
+    <strong>From $70<small>/night</small></strong>
+    <small>Best rate &middot; book direct</small>
+  </div>
+  <a href="#book" class="book-bar__btn">Book Now</a>
+</div>
+
+<!-- ============================================================
+     SCRIPTS — ES modules
+     ============================================================ -->
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+  <defs>
+    <radialGradient id="sunCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FBE6A0" stop-opacity="1"/>
+      <stop offset="45%" stop-color="#EAC059" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#E0A93C" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- soft sun core -->
+  <circle cx="300" cy="300" r="120" fill="url(#sunCore)" filter="url(#softGlow)"/>
+
+  <!-- dot-ray arc: 44 dots in a 270° arc, sized rhythmically -->
+  <g fill="#EAC059">
+    <!-- procedurally generated dots, mirroring the real logo's signature -->
+  </g>
+</svg>

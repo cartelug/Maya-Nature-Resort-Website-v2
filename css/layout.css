@@ -1,0 +1,110 @@
+/* ============================================================
+   LAYOUT — Containers and structural utilities
+   ============================================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--w-wide);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.container--narrow { max-width: var(--w-narrow); }
+.container--text   { max-width: var(--w-text); }
+.container--full   { max-width: var(--w-full); }
+
+/* Vertical section rhythm */
+.section {
+  padding-block: clamp(4rem, 9vw, 7.5rem);
+}
+
+.section--tight {
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.section--hero {
+  padding-block: 0;
+}
+
+/* Section heads */
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.section-head--center {
+  align-items: center;
+  text-align: center;
+}
+
+.section-head--split {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--sp-8);
+  align-items: end;
+}
+
+@media (max-width: 720px) {
+  .section-head--split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Grid helpers */
+.grid {
+  display: grid;
+  gap: var(--sp-6);
+}
+
+.grid--cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid--cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid--cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+.grid--two-up {
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+@media (max-width: 960px) {
+  .grid--cols-3,
+  .grid--cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid--two-up {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid--cols-2,
+  .grid--cols-3,
+  .grid--cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Flow — vertical rhythm for prose */
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+/* Stack — flexible vertical stack */
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack > * + * {
+  margin-top: var(--stack-space, var(--sp-4));
+}
+
+/* Cluster — horizontal group with wrap */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cluster-space, var(--sp-3));
+  align-items: center;
+}

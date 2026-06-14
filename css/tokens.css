@@ -1,0 +1,140 @@
+/* ============================================================
+   MAYA NATURE RESORT — DESIGN TOKENS
+   Single source of truth for every visual decision.
+   ============================================================ */
+
+:root {
+  /* — Brand palette (extracted from logo) — */
+  --c-green-50:  #F1F7F2;
+  --c-green-100: #DCEAE0;
+  --c-green-200: #B3D1BC;
+  --c-green-400: #5BA069;
+  --c-green-500: #3F884A;   /* primary brand green */
+  --c-green-600: #2D6E38;
+  --c-green-700: #1F5228;
+  --c-green-800: #112D17;
+  --c-green-900: #0A1B0D;
+
+  --c-gold-50:   #FBF4DC;
+  --c-gold-100:  #F6E7B0;
+  --c-gold-200:  #F1D982;
+  --c-gold-400:  #EAC059;   /* primary brand gold (sun dots) */
+  --c-gold-500:  #DFB23B;   /* tagline italic gold */
+  --c-gold-600:  #C9993A;
+  --c-gold-700:  #95711C;
+
+  --c-cream:     #FAF7EF;
+  --c-cream-2:   #F1EAD8;
+  --c-paper:     #FFFFFF;
+
+  --c-ink:       #1A2010;
+  --c-ink-soft:  #54604A;
+  --c-ink-mute:  #8A937D;
+  --c-line:      #E2DAC8;
+  --c-line-soft: #EFE9D6;
+
+  /* — Semantic aliases — */
+  --c-bg:        var(--c-cream);
+  --c-bg-alt:    var(--c-paper);
+  --c-bg-deep:   var(--c-green-900);
+  --c-text:      var(--c-ink);
+  --c-text-soft: var(--c-ink-soft);
+  --c-accent:    var(--c-gold-400);
+  --c-primary:   var(--c-green-500);
+
+  /* — Typography — */
+  --ff-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --ff-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Modular type scale — perfect fourth (1.333) on a fluid base */
+  --fs-12:  0.75rem;
+  --fs-14:  0.875rem;
+  --fs-15:  0.9375rem;
+  --fs-16:  1rem;
+  --fs-18:  clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --fs-20:  clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  --fs-24:  clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --fs-32:  clamp(1.5rem, 1.25rem + 1.25vw, 2rem);
+  --fs-40:  clamp(1.875rem, 1.5rem + 1.875vw, 2.5rem);
+  --fs-52:  clamp(2.25rem, 1.6rem + 3.25vw, 3.25rem);
+  --fs-72:  clamp(3rem, 1.8rem + 6vw, 4.5rem);
+  --fs-96:  clamp(3.5rem, 2rem + 7.5vw, 6rem);
+
+  --lh-tight:   1.05;
+  --lh-snug:    1.2;
+  --lh-normal:  1.55;
+  --lh-relaxed: 1.75;
+
+  --tracking-tight: -0.02em;
+  --tracking-snug:  -0.005em;
+  --tracking-wide:  0.04em;
+  --tracking-wider: 0.18em;
+  --tracking-widest: 0.32em;
+
+  /* — Spacing scale (4px base) — */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.25rem;
+  --sp-6:  1.5rem;
+  --sp-8:  2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+  --sp-24: 6rem;
+  --sp-32: 8rem;
+
+  /* — Container widths — */
+  --w-narrow: 720px;
+  --w-text:   880px;
+  --w-wide:   1240px;
+  --w-full:   1440px;
+
+  /* — Radii — */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* — Shadows — */
+  --shadow-1: 0 2px 8px rgba(20, 40, 22, 0.06), 0 1px 2px rgba(20, 40, 22, 0.04);
+  --shadow-2: 0 8px 24px rgba(20, 40, 22, 0.10), 0 2px 6px rgba(20, 40, 22, 0.06);
+  --shadow-3: 0 18px 48px rgba(20, 40, 22, 0.14), 0 6px 14px rgba(20, 40, 22, 0.08);
+  --shadow-4: 0 32px 80px rgba(20, 40, 22, 0.22), 0 10px 24px rgba(20, 40, 22, 0.12);
+  --shadow-gold: 0 8px 24px rgba(234, 192, 89, 0.4);
+  --shadow-gold-lg: 0 16px 40px rgba(234, 192, 89, 0.5);
+
+  /* — Motion — */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:    cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --dur-fast:   180ms;
+  --dur-base:   320ms;
+  --dur-slow:   520ms;
+  --dur-slower: 900ms;
+
+  /* — Z-index scale — */
+  --z-base:    1;
+  --z-raised:  10;
+  --z-overlay: 100;
+  --z-nav:     500;
+  --z-modal:   1000;
+  --z-toast:   1500;
+}
+
+/* Respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

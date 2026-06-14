@@ -1,0 +1,62 @@
+/* ============================================================
+   SVG SCENES — Custom illustrations replacing gradient placeholders.
+   Each scene is a CSS background-image with an inline SVG URL.
+   Rich, branded, themed per slot.
+   ============================================================ */
+
+/* Helper mixin idea (compiled out here as raw SVG urls).
+   All scenes share: 16/10 ratio illustrated background that crops well
+   under aspect-ratio containers. */
+
+/* — Sunrise scene: golden sky, layered hills, Sun Hill silhouette — */
+.scene-sunrise {
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' preserveAspectRatio='xMidYMid slice'><defs><linearGradient id='sky' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23F8D88A'/><stop offset='0.45' stop-color='%23E8B563'/><stop offset='0.75' stop-color='%23A87A42'/><stop offset='1' stop-color='%233A4A2A'/></linearGradient><radialGradient id='sun' cx='0.5' cy='0.45' r='0.18'><stop offset='0' stop-color='%23FFF3C5'/><stop offset='0.5' stop-color='%23F2C463' stop-opacity='0.9'/><stop offset='1' stop-color='%23F2C463' stop-opacity='0'/></radialGradient></defs><rect width='800' height='500' fill='url(%23sky)'/><circle cx='400' cy='225' r='180' fill='url(%23sun)'/><circle cx='400' cy='225' r='52' fill='%23FFE3A0' opacity='0.85'/><path d='M0 380 Q200 320 400 360 T800 340 L800 500 L0 500 Z' fill='%232D4A2A' opacity='0.85'/><path d='M0 420 Q180 380 380 410 T800 400 L800 500 L0 500 Z' fill='%231F3A1F' opacity='0.95'/><path d='M0 460 Q200 440 400 455 T800 450 L800 500 L0 500 Z' fill='%23142A14'/></svg>") center/cover;
+}
+
+/* — Forest scene: pine silhouettes, misty greens — */
+.scene-forest {
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' preserveAspectRatio='xMidYMid slice'><defs><linearGradient id='fSky' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%231E3D26'/><stop offset='0.5' stop-color='%23163024'/><stop offset='1' stop-color='%230C1E13'/></linearGradient><radialGradient id='fMist' cx='0.5' cy='0.6' r='0.5'><stop offset='0' stop-color='%23A8C49C' stop-opacity='0.18'/><stop offset='1' stop-color='%23A8C49C' stop-opacity='0'/></radialGradient></defs><rect width='800' height='500' fill='url(%23fSky)'/><rect width='800' height='500' fill='url(%23fMist)'/><g fill='%23142E1A' opacity='0.9'><path d='M50 500 L50 300 L20 380 L80 380 L50 280 L10 380 L90 380 L50 250 L0 380 L100 380 Z'/><path d='M150 500 L150 250 L110 360 L190 360 L150 220 L100 370 L200 370 L150 190 L90 380 L210 380 Z'/></g><g fill='%23183A20' opacity='0.95'><path d='M280 500 L280 270 L240 370 L320 370 L280 240 L230 380 L330 380 L280 210 L220 390 L340 390 Z'/><path d='M420 500 L420 240 L370 360 L470 360 L420 200 L360 380 L480 380 L420 170 L350 400 L490 400 Z'/><path d='M580 500 L580 280 L540 370 L620 370 L580 250 L530 380 L630 380 L580 220 L520 390 L640 390 Z'/></g><g fill='%231E4326'><path d='M720 500 L720 260 L680 370 L760 370 L720 230 L670 390 L770 390 L720 200 L660 400 L780 400 Z'/></g><rect x='0' y='460' width='800' height='40' fill='%230A1810'/></svg>") center/cover;
+}
+
+/* — Water/pool scene: pool with reflected sky — */
+.scene-water {
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' preserveAspectRatio='xMidYMid slice'><defs><linearGradient id='wSky' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%2392C5DC'/><stop offset='1' stop-color='%23476B7A'/></linearGradient><linearGradient id='wPool' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%231F5C6E'/><stop offset='0.5' stop-color='%23154353'/><stop offset='1' stop-color='%230B2A38'/></linearGradient></defs><rect width='800' height='220' fill='url(%23wSky)'/><circle cx='620' cy='85' r='42' fill='%23F4D58F' opacity='0.85'/><path d='M0 200 Q200 170 400 195 T800 190 L800 220 L0 220 Z' fill='%231F3A22' opacity='0.85'/><rect x='0' y='220' width='800' height='280' fill='url(%23wPool)'/><g fill='%23FFFFFF' opacity='0.18'><ellipse cx='180' cy='280' rx='80' ry='3'/><ellipse cx='340' cy='320' rx='100' ry='3'/><ellipse cx='580' cy='300' rx='90' ry='3'/><ellipse cx='200' cy='400' rx='110' ry='3'/><ellipse cx='500' cy='430' rx='130' ry='3'/></g><g fill='%23F4D58F' opacity='0.5'><ellipse cx='620' cy='270' rx='60' ry='4'/><ellipse cx='620' cy='340' rx='40' ry='3'/></g></svg>") center/cover;
+}
+
+/* — Garden scene: green oasis with flowers — */
+.scene-garden {
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' preserveAspectRatio='xMidYMid slice'><defs><linearGradient id='gSky' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23B8D3A8'/><stop offset='0.5' stop-color='%237EB07A'/><stop offset='1' stop-color='%232D6E38'/></linearGradient></defs><rect width='800' height='500' fill='url(%23gSky)'/><circle cx='670' cy='100' r='52' fill='%23F4D58F' opacity='0.85'/><path d='M0 360 Q200 320 400 345 T800 335 L800 500 L0 500 Z' fill='%231F5228' opacity='0.85'/><path d='M0 400 Q180 370 380 390 T800 385 L800 500 L0 500 Z' fill='%23143C1B'/><g fill='%23EAC059'><circle cx='120' cy='420' r='5'/><circle cx='150' cy='430' r='4'/><circle cx='180' cy='415' r='5'/><circle cx='220' cy='435' r='4'/><circle cx='260' cy='420' r='5'/></g><g fill='%23E07A8B'><circle cx='420' cy='430' r='5'/><circle cx='460' cy='418' r='4'/><circle cx='500' cy='435' r='5'/><circle cx='540' cy='425' r='4'/></g><g fill='%23D4E0A8'><circle cx='620' cy='420' r='4'/><circle cx='660' cy='435' r='5'/><circle cx='700' cy='418' r='4'/><circle cx='740' cy='430' r='5'/></g></svg>") center/cover;
+}
+
+/* — Dusk scene: candlelit terrace at twilight — */
+.scene-dusk {
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' preserveAspectRatio='xMidYMid slice'><defs><linearGradient id='dSky' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%231A1842'/><stop offset='0.4' stop-color='%23533462'/><stop offset='0.7' stop-color='%23C26B5F'/><stop offset='1' stop-color='%23F2A878'/></linearGradient></defs><rect width='800' height='500' fill='url(%23dSky)'/><circle cx='620' cy='320' r='32' fill='%23F4D58F' opacity='0.4'/><g fill='%23FFFFFF' opacity='0.7'><circle cx='80' cy='80' r='1'/><circle cx='180' cy='50' r='1.2'/><circle cx='280' cy='90' r='1'/><circle cx='380' cy='60' r='1.4'/><circle cx='480' cy='100' r='1'/><circle cx='580' cy='70' r='1.2'/><circle cx='680' cy='90' r='1'/><circle cx='740' cy='50' r='1.4'/></g><path d='M0 380 L800 380 L800 500 L0 500 Z' fill='%23120A20'/><g><rect x='100' y='340' width='4' height='40' fill='%235A4030'/><circle cx='102' cy='335' r='8' fill='%23FFD78A' opacity='0.9'/><circle cx='102' cy='335' r='16' fill='%23FFD78A' opacity='0.3'/></g><g><rect x='280' y='340' width='4' height='40' fill='%235A4030'/><circle cx='282' cy='335' r='8' fill='%23FFD78A' opacity='0.9'/><circle cx='282' cy='335' r='16' fill='%23FFD78A' opacity='0.3'/></g><g><rect x='460' y='340' width='4' height='40' fill='%235A4030'/><circle cx='462' cy='335' r='8' fill='%23FFD78A' opacity='0.9'/><circle cx='462' cy='335' r='16' fill='%23FFD78A' opacity='0.3'/></g><g><rect x='640' y='340' width='4' height='40' fill='%235A4030'/><circle cx='642' cy='335' r='8' fill='%23FFD78A' opacity='0.9'/><circle cx='642' cy='335' r='16' fill='%23FFD78A' opacity='0.3'/></g></svg>") center/cover;
+}
+
+/* — Meadow scene: rolling green hills — */
+.scene-meadow {
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' preserveAspectRatio='xMidYMid slice'><defs><linearGradient id='mSky' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23CFE3D8'/><stop offset='1' stop-color='%2386B585'/></linearGradient></defs><rect width='800' height='500' fill='url(%23mSky)'/><g fill='%23FFFFFF' opacity='0.85'><path d='M100 90 Q120 70 150 78 Q170 60 195 78 Q220 70 230 95 Q240 110 220 115 L120 115 Q90 110 100 90 Z'/><path d='M520 60 Q540 45 565 52 Q585 40 605 55 Q625 50 632 70 Q638 82 622 86 L535 86 Q510 80 520 60 Z'/></g><path d='M0 320 Q200 270 400 300 T800 290 L800 500 L0 500 Z' fill='%2358964F' opacity='0.85'/><path d='M0 360 Q180 330 380 350 T800 345 L800 500 L0 500 Z' fill='%233F7A3A'/><path d='M0 420 Q200 400 400 415 T800 410 L800 500 L0 500 Z' fill='%232A5828'/><g fill='%23EAC059' opacity='0.8'><circle cx='80' cy='430' r='3'/><circle cx='120' cy='445' r='2'/><circle cx='180' cy='435' r='3'/><circle cx='250' cy='450' r='2'/><circle cx='340' cy='440' r='3'/><circle cx='420' cy='455' r='2'/><circle cx='510' cy='445' r='3'/><circle cx='590' cy='435' r='2'/><circle cx='670' cy='450' r='3'/><circle cx='750' cy='440' r='2'/></g></svg>") center/cover;
+}
+
+/* — Hill scene: panoramic Sun Hill view — */
+.scene-hill {
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' preserveAspectRatio='xMidYMid slice'><defs><linearGradient id='hSky' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23A8C5D8'/><stop offset='0.6' stop-color='%23D4D8B8'/><stop offset='1' stop-color='%23E8C58A'/></linearGradient></defs><rect width='800' height='500' fill='url(%23hSky)'/><circle cx='580' cy='130' r='38' fill='%23F4D58F' opacity='0.95'/><path d='M0 260 Q150 220 300 250 T600 240 T800 250 L800 280 Q650 260 500 275 T200 270 L0 280 Z' fill='%235D7A88' opacity='0.5'/><path d='M0 310 Q200 280 400 305 T800 300 L800 340 Q600 320 400 330 T0 335 Z' fill='%234A6266' opacity='0.7'/><path d='M0 360 Q200 330 400 350 T800 345 L800 500 L0 500 Z' fill='%23315240' opacity='0.9'/><path d='M0 410 Q200 390 400 405 T800 400 L800 500 L0 500 Z' fill='%231E3A28'/></svg>") center/cover;
+}
+
+/* — Honey scene: golden interior glow / honeymoon — */
+.scene-honey {
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' preserveAspectRatio='xMidYMid slice'><defs><radialGradient id='hHero' cx='0.5' cy='0.45' r='0.7'><stop offset='0' stop-color='%23F4D58F'/><stop offset='0.5' stop-color='%23B07F3E'/><stop offset='1' stop-color='%233A2410'/></radialGradient></defs><rect width='800' height='500' fill='url(%23hHero)'/><g fill='%23FFD78A' opacity='0.6'><circle cx='150' cy='150' r='3'/><circle cx='250' cy='100' r='2'/><circle cx='350' cy='180' r='3'/><circle cx='550' cy='130' r='2'/><circle cx='650' cy='180' r='3'/><circle cx='200' cy='280' r='2'/><circle cx='450' cy='320' r='3'/><circle cx='620' cy='300' r='2'/></g><path d='M250 350 Q400 280 550 350 Q550 420 400 420 Q250 420 250 350 Z' fill='%231A0E08' opacity='0.5'/><circle cx='400' cy='200' r='80' fill='%23FFD78A' opacity='0.3'/><circle cx='400' cy='200' r='35' fill='%23FFF5D0' opacity='0.6'/></svg>") center/cover;
+}
+
+/* — Real photo scenes — these stay as the actual JPEGs — */
+.scene-photo-hilltop { background: url('../assets/img/hero-sunhill.jpg') center 40%/cover; }
+.scene-photo-heart   { background: url('../assets/img/event-heart.jpg') center/cover; }
+.scene-photo-monkey  { background: url('../assets/img/wildlife-vervet.jpg') center 55%/cover; }
