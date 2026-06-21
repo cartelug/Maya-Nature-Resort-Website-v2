@@ -20,7 +20,13 @@
 
 .display em {
   font-style: italic;
-  color: var(--c-gold-600);
+  background: var(--grad-gold);
+  background-size: 220% 100%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gold-shimmer 6s ease-in-out infinite;
 }
 
 .display--light {
@@ -28,7 +34,17 @@
 }
 
 .display--light em {
-  color: var(--c-gold-100);
+  background-image: linear-gradient(100deg, #DFB23B 0%, #FBF4DC 35%, #FFFFFF 50%, #FBF4DC 65%, #DFB23B 100%);
+  background-size: 220% 100%;
+}
+
+@keyframes gold-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .display em { animation: none; }
 }
 
 .lead {
@@ -108,9 +124,12 @@
   border-radius: var(--r-pill);
   cursor: pointer;
   border: 1.5px solid transparent;
+  position: relative;
+  overflow: hidden;
   transition: transform var(--dur-base) var(--ease-spring),
               box-shadow var(--dur-base) var(--ease-out-quart),
               background-color var(--dur-base) var(--ease-out-quart),
+              background-position var(--dur-slow) var(--ease-out-quart),
               border-color var(--dur-base) var(--ease-out-quart),
               color var(--dur-base) var(--ease-out-quart);
   white-space: nowrap;
@@ -125,13 +144,16 @@
 }
 
 .btn--primary {
-  background: var(--c-gold-400);
+  background-image: var(--grad-gold-btn);
+  background-size: 180% 180%;
+  background-position: 0% 0%;
   color: var(--c-green-900);
   box-shadow: var(--shadow-gold);
 }
 
 .btn--primary:hover {
-  background: var(--c-gold-100);
+  background-image: var(--grad-gold-btn-hover);
+  background-position: 100% 100%;
   box-shadow: var(--shadow-gold-lg);
 }
 
