@@ -48,6 +48,7 @@
 
   /* Modular type scale — perfect fourth (1.333) on a fluid base */
   --fs-12:  0.75rem;
+  --fs-13:  0.8125rem;
   --fs-14:  0.875rem;
   --fs-15:  0.9375rem;
   --fs-16:  1rem;
