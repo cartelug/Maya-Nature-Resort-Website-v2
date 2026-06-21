@@ -69,9 +69,11 @@ export function initBooking() {
       const room = btn.dataset.room;
       const select = document.getElementById('bRoom');
       if (select) {
-        // Try to match the room option in the select; if found, set it
+        // Match the option by its name with the price/parenthetical stripped,
+        // so similarly-prefixed rooms (e.g. "Standard Single" vs "Standard Double") don't collide
+        const roomName = room.replace(/\s*\(.*\)\s*$/, '').trim().toLowerCase();
         const opt = Array.from(select.options).find(o =>
-          o.value.toLowerCase().startsWith(room.split(' ')[0].toLowerCase())
+          o.text.split('—')[0].trim().toLowerCase() === roomName
         );
         if (opt) select.value = opt.value;
       }
