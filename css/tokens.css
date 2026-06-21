@@ -107,6 +107,12 @@
   --shadow-4: 0 32px 80px rgba(20, 40, 22, 0.22), 0 10px 24px rgba(20, 40, 22, 0.12);
   --shadow-gold: 0 8px 24px rgba(234, 192, 89, 0.4);
   --shadow-gold-lg: 0 16px 40px rgba(234, 192, 89, 0.5);
+  --shadow-glow-green: 0 18px 44px rgba(45, 110, 56, 0.28), 0 0 0 1px rgba(234, 192, 89, 0.35);
+
+  /* — Gradients — */
+  --grad-gold: linear-gradient(100deg, #C9993A 0%, #F1D982 35%, #FBF4DC 50%, #F1D982 65%, #C9993A 100%);
+  --grad-gold-btn: linear-gradient(135deg, #F6E7B0 0%, #EAC059 55%, #DFB23B 100%);
+  --grad-gold-btn-hover: linear-gradient(135deg, #FBF4DC 0%, #F1D982 55%, #EAC059 100%);
 
   /* — Motion — */
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
