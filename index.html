@@ -33,10 +33,25 @@
   <link rel="stylesheet" href="css/hero.css">
   <link rel="stylesheet" href="css/sections.css">
   <link rel="stylesheet" href="css/scenes.css">
+  <link rel="stylesheet" href="css/experience.css">
 </head>
 <body>
 
 <a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- Cinematic intro loader (removed by JS after sunrise) -->
+<div id="intro" class="intro" aria-hidden="true">
+  <div class="intro__sun"></div>
+  <div class="intro__mark">
+    <img src="assets/img/logo-clean.png" alt="Maya Nature Resort">
+    <div class="intro__tag">Where the sun rises and sets</div>
+  </div>
+  <div class="intro__bar"></div>
+</div>
+
+<!-- Scroll progress + film grain -->
+<div id="xProgress" class="x-progress" aria-hidden="true"></div>
+<div class="x-grain" aria-hidden="true"></div>
 
 <!-- ============================================================
      NAV
@@ -52,7 +67,7 @@
       <a href="#events" class="nav__link">Events</a>
       <a href="#gallery" class="nav__link">Gallery</a>
       <a href="#contact" class="nav__link">Contact</a>
-      <a href="#book" class="nav__cta">Book Now</a>
+      <a href="#book" class="nav__cta x-magnetic" data-magnet="0.35">Book Now</a>
     </div>
     <button id="burger" class="nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
@@ -80,6 +95,7 @@
 <header class="hero" id="home">
   <div class="hero__photo" role="img" aria-label="Sun Hill at Maya Nature Resort with Kampala stretching to the horizon"></div>
   <div class="hero__veil"></div>
+  <div class="hero__rays" aria-hidden="true"></div>
   <div id="heroSun" class="hero__sun" aria-hidden="true">
     <div class="hero__sun-core"></div>
   </div>
@@ -92,9 +108,13 @@
         <span class="pill pill--light" style="margin-top:1rem">Est. 2018 &middot; 4.7&#9733; Guest Rated</span>
         <h1 class="hero__title">Where the sun<br><em>rises</em> and sets</h1>
         <p class="hero__sub">A luxury nature escape just 22 kilometres from Kampala — ancient forest, Africa's most colourful dancing fountain, and unforgettable stays beneath the Sun Hill sky.</p>
+        <div id="heroClock" class="hero__clock" aria-label="Local time at Maya">
+          <span class="dot" aria-hidden="true"></span>
+          <span>It's <b data-time>--:--</b> at Sun Hill &middot; golden hour in <b data-til>--</b></span>
+        </div>
         <div class="hero__ctas">
-          <a href="#book" class="btn btn--primary">Book Your Stay</a>
-          <a href="#rooms" class="btn btn--ghost">Explore the Resort</a>
+          <a href="#book" class="btn btn--primary x-magnetic" data-magnet="0.5">Book Your Stay</a>
+          <a href="#rooms" class="btn btn--ghost x-magnetic" data-magnet="0.3">Explore the Resort</a>
         </div>
       </div>
     </div>
@@ -165,10 +185,32 @@
       <span class="pill pill--light" style="margin-top:1.5rem">&#10024; A "mini-Dubai", 30 minutes from the city</span>
     </div>
     <div id="fountainStage" class="fountain__stage reveal reveal--d2" aria-label="Animated representation of the dancing fountain">
+      <canvas id="fountainCanvas" class="fountain__canvas" aria-hidden="true"></canvas>
       <div class="fountain__stage-glow"></div>
     </div>
   </div>
 </section>
+
+<!-- ============================================================
+     ACCOLADES MARQUEE
+     ============================================================ -->
+<div class="marquee" aria-label="What guests and press say about Maya">
+  <div class="marquee__track">
+    <span class="marquee__item">4.7&#9733; Guest Rated</span>
+    <span class="marquee__item">"A mini-Dubai, 30 minutes from the city"</span>
+    <span class="marquee__item">Africa's only dancing fountain</span>
+    <span class="marquee__item">3,000-guest Bulangiti Hall</span>
+    <span class="marquee__item">12 hectares of preserved forest</span>
+    <span class="marquee__item">A 40-year dream, opened 2018</span>
+    <!-- duplicated for seamless loop -->
+    <span class="marquee__item">4.7&#9733; Guest Rated</span>
+    <span class="marquee__item">"A mini-Dubai, 30 minutes from the city"</span>
+    <span class="marquee__item">Africa's only dancing fountain</span>
+    <span class="marquee__item">3,000-guest Bulangiti Hall</span>
+    <span class="marquee__item">12 hectares of preserved forest</span>
+    <span class="marquee__item">A 40-year dream, opened 2018</span>
+  </div>
+</div>
 
 <!-- ============================================================
      ROOMS
@@ -182,7 +224,7 @@
     </div>
 
     <div class="rooms__grid">
-      <article class="room reveal reveal--d1">
+      <article class="room x-tilt reveal reveal--d1">
         <div class="room__media"><div class="room__scene scene-sunrise"></div><div class="room__price">$70<small>/night</small></div></div>
         <div class="room__body">
           <div class="room__tag">Deluxe Block</div>
@@ -193,7 +235,7 @@
         </div>
       </article>
 
-      <article class="room reveal reveal--d2">
+      <article class="room x-tilt reveal reveal--d2">
         <div class="room__media"><div class="room__scene scene-garden"></div><div class="room__price">$90<small>/night</small></div></div>
         <div class="room__body">
           <div class="room__tag">Deluxe Block</div>
@@ -204,7 +246,7 @@
         </div>
       </article>
 
-      <article class="room reveal reveal--d3">
+      <article class="room x-tilt reveal reveal--d3">
         <div class="room__media"><div class="room__scene scene-meadow"></div><div class="room__price">$100<small>/night</small></div></div>
         <div class="room__body">
           <div class="room__tag">Deluxe Block</div>
@@ -215,7 +257,7 @@
         </div>
       </article>
 
-      <article class="room reveal reveal--d1">
+      <article class="room x-tilt reveal reveal--d1">
         <div class="room__media"><div class="room__scene scene-forest"></div><div class="room__price">$130<small>/night</small></div></div>
         <div class="room__body">
           <div class="room__tag">Msizi Cottage</div>
@@ -226,7 +268,7 @@
         </div>
       </article>
 
-      <article class="room reveal reveal--d2">
+      <article class="room x-tilt reveal reveal--d2">
         <div class="room__media"><div class="room__scene scene-honey"></div><div class="room__price">$150<small>/night</small></div></div>
         <div class="room__body">
           <div class="room__tag">Msizi Cottage</div>
@@ -237,7 +279,7 @@
         </div>
       </article>
 
-      <article class="room reveal reveal--d3">
+      <article class="room x-tilt reveal reveal--d3">
         <div class="room__media"><div class="room__scene scene-hill"></div><div class="room__price">$250<small>/night</small></div></div>
         <div class="room__body">
           <div class="room__tag">Msizi Cottage</div>
@@ -578,7 +620,7 @@
     <strong>From $70<small>/night</small></strong>
     <small>Best rate &middot; book direct</small>
   </div>
-  <a href="#book" class="book-bar__btn">Book Now</a>
+  <a href="#book" class="book-bar__btn x-magnetic" data-magnet="0.3">Book Now</a>
 </div>
 
 <!-- ============================================================
