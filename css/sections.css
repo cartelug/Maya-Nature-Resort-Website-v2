@@ -158,14 +158,16 @@
   border-radius: var(--r-lg);
   overflow: hidden;
   transition: transform var(--dur-slow) var(--ease-out-expo),
-              box-shadow var(--dur-slow) var(--ease-out-expo);
+              box-shadow var(--dur-slow) var(--ease-out-expo),
+              border-color var(--dur-slow) var(--ease-out-expo);
   display: flex;
   flex-direction: column;
 }
 
 .room:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-3);
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-glow-green);
+  border-color: var(--c-gold-200);
 }
 
 .room__media {
@@ -184,26 +186,35 @@
   transform: scale(1.08);
 }
 
+.room__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 27, 13, 0.05) 0%, rgba(10, 27, 13, 0.32) 100%);
+  pointer-events: none;
+}
+
 .room__price {
   position: absolute;
   top: var(--sp-3);
   right: var(--sp-3);
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
+  z-index: 2;
+  background-image: var(--grad-gold-btn);
   border-radius: var(--r-pill);
   padding: 0.45rem 0.95rem;
   font-family: var(--ff-display);
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--fs-15);
-  color: var(--c-green-800);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  color: var(--c-green-900);
+  box-shadow: 0 6px 18px rgba(223, 178, 59, 0.45);
 }
 
 .room__price small {
   font-family: var(--ff-body);
   font-weight: 400;
   font-size: var(--fs-12);
-  color: var(--c-text-soft);
+  color: var(--c-green-800);
+  opacity: 0.75;
 }
 
 .room__body {
@@ -262,7 +273,7 @@
 .room__book {
   margin-top: auto;
   width: 100%;
-  background: var(--c-green-500);
+  background: linear-gradient(135deg, var(--c-green-500), var(--c-green-700));
   color: #fff;
   border: none;
   padding: 0.85rem 1rem;
@@ -271,13 +282,16 @@
   font-size: var(--fs-13);
   font-family: var(--ff-body);
   cursor: pointer;
+  box-shadow: 0 6px 16px rgba(31, 82, 40, 0.22);
   transition: background-color var(--dur-base) var(--ease-out-quart),
+              box-shadow var(--dur-base) var(--ease-out-quart),
               transform var(--dur-base) var(--ease-spring);
 }
 
 .room__book:hover {
-  background: var(--c-green-600);
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, var(--c-green-600), var(--c-green-800));
+  box-shadow: 0 10px 22px rgba(31, 82, 40, 0.32);
+  transform: translateY(-2px);
 }
 
 /* Scene presets — now live in scenes.css as custom SVG illustrations */
@@ -560,13 +574,33 @@
 .g-item__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(14, 32, 18, 0.5), transparent 60%);
+  background: linear-gradient(to top, rgba(10, 24, 14, 0.82) 0%, rgba(10, 24, 14, 0.1) 55%, transparent 75%);
   opacity: 0;
   transition: opacity var(--dur-slow) var(--ease-out-expo);
 }
 
 .g-item:hover .g-item__overlay {
   opacity: 1;
+}
+
+.g-item__caption {
+  position: absolute;
+  inset: auto var(--sp-4) var(--sp-4) var(--sp-4);
+  z-index: 2;
+  color: #fff;
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-size: var(--fs-15);
+  letter-spacing: var(--tracking-snug);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity var(--dur-slow) var(--ease-out-expo),
+              transform var(--dur-slow) var(--ease-out-expo);
+}
+
+.g-item:hover .g-item__caption {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .g-item--tall { grid-row: span 2; }
@@ -602,22 +636,31 @@
   border-radius: var(--r-lg);
   padding: var(--sp-8) var(--sp-6);
   position: relative;
+  overflow: hidden;
   transition: transform var(--dur-slow) var(--ease-out-expo),
-              box-shadow var(--dur-slow) var(--ease-out-expo);
+              box-shadow var(--dur-slow) var(--ease-out-expo),
+              border-color var(--dur-slow) var(--ease-out-expo);
 }
 
 .testi__card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-2);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-3);
+  border-color: var(--c-gold-200);
 }
 
 .testi__quote-mark {
+  position: absolute;
+  top: -0.25rem;
+  right: var(--sp-5);
   font-family: var(--ff-display);
-  font-size: 64px;
-  color: var(--c-gold-400);
-  line-height: 0.5;
-  opacity: 0.5;
-  margin-bottom: var(--sp-3);
+  font-size: 120px;
+  background: var(--grad-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+  opacity: 0.35;
+  pointer-events: none;
 }
 
 .testi__stars {
@@ -786,6 +829,16 @@
   background: #0A1810;
   color: rgba(255, 255, 255, 0.72);
   padding-top: var(--sp-16);
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: var(--grad-gold);
+  background-size: 220% 100%;
 }
 
 .footer__grid {
